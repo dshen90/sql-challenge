@@ -1,0 +1,44 @@
+Employees
+-
+emp_no int pk
+birth_day char
+first_name charvar
+last_name charvar
+gender charvar(1)
+hire_date charvar
+
+Salaries
+-
+emp_no int fk - Employees.emp_no
+salary int
+from_date charvar
+to_date charvar null
+
+Titles
+-
+emp_no int fk - Employees.emp_no
+title charvar
+from_date charvar
+to_date charvar null
+
+Departments
+-
+dept_no charvar pk
+dept_name charvar
+
+Department_Employee
+-
+dept_no charvar fk >- Departments.dept_no
+emp_no int fk - Employees.emp_no
+from_date charvar
+to_date charvar null
+
+Department_Manager
+-
+dept_no charvar fk - Departments.dept_no
+emp_no int fk - Employees.emp_no
+from_date charvar fk - Employees.hire_date
+to_date charvar null
+
+
+
